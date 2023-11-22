@@ -20,10 +20,12 @@ public class App
     {
     System.out.println("Script Started");	
        //initializing the web driver
-    //System.setProperty("webdriver.chrome.driver", "C:\\Users\\sairo\\Desktop\\DEvops\\Assignments\\chromedriver-win641\\chromedriver-win64\\chromedriver.exe");
+    System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
     //setting properties
     ChromeOptions chromeOptions = new ChromeOptions();
 	chromeOptions.addArguments("--headless");
+	chromeOptions.addArguments("--disable-gpu");
+	chromeOptions.addArguments("--no-sandbox");
     // open url
     System.out.println("Driver opening up the url in browser");	
     WebDriver driver = new ChromeDriver(chromeOptions);
